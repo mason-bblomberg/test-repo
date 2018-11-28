@@ -9,11 +9,11 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   
-  var idxVerb = req.url.indexof("say_hello");
+  var idxVerb = req.url.indexOf("say_hello");
   console.log('index of say_hello is %s', idxVerb);
   
   
-  if (idxVerb = 1) {
+  if (idxVerb == 1) {
 	  var strName = req.url.substring(11);
 	  res.end('Hello, '+ strName + '\n');
   } else {
